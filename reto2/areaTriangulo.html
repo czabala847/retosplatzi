@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Área de un triangulo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div id="app">
-      <div class="container">
+      <!-- encabezado -->
+      <div class="container py-3">
         <div class="row">
-          <div class="col">
+          <div class="col-12">
             <h1>Área de un triángulo</h1>
             <p>
               Es momento de poner ese conocimiento a la práctica. El área de un
@@ -18,34 +25,89 @@
           </div>
         </div>
       </div>
+      <!-- fin encabezado -->
+
+      <!-- formulario -->
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <form>
-              <div class="form-group">
-                <label for="area">Ingrese área</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="area"
-                  aria-describedby="areaTriangulo"
-                  placeholder="Ingrese el área del triangulo"
-                />
-              </div>
+          <div class="col-sm-12 col-md-6 offset-md-3">
+            <form id="form-calc-area">
               <div class="form-group">
                 <label for="base">Ingrese base</label>
                 <input
                   type="number"
                   class="form-control"
                   id="base"
-                  placeholder="Ingrese el área del triangulo"
+                  name="base"
+                  aria-describedby="baseTriangulo"
                 />
               </div>
-              <button type="submit" class="btn btn-primary">Calcular</button>
+              <div class="form-group">
+                <label for="altura">Ingrese altura</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="altura"
+                  name="altura"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary mt-2">
+                Resultado
+              </button>
             </form>
           </div>
         </div>
       </div>
+      <!-- fin formulario -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modalResult"
+        tabindex="-1"
+        aria-labelledby="modalResultLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalResultLabel">
+                Resultado de la operación
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="showResult"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+    <script src="./areaTriangulo.js"></script>
   </body>
 </html>
